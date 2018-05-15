@@ -1,0 +1,8 @@
+# rbenv
+eval "$(rbenv init -)"
+
+#export PATH="/Users/thanx/.rbenv/shims:$PATH"
+export PATH="/Users/thanx/.rbenv/versions/2.5.0/bin:$PATH"
+
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH

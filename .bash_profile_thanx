@@ -1,0 +1,11 @@
+. ~/.profile
+#case $- in *i*) . ~/.bashrc;; esac
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Usful Aliases
+alias allshow='find . -type d -depth 1 -exec echo {} \; -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;'
+alias allfetch='find . -type d -depth 1 -exec echo {} \; -exec git --git-dir={}/.git --work-tree=$PWD/{} fetch --all \;'
+alias sshonce='eval `ssh-agent -s -t 300`; ssh-add ;'
